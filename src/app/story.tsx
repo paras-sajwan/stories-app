@@ -2,23 +2,32 @@ import {useEffect, useState} from 'react';
 import Image from 'next/image';
 
 
-export default function Story({data, currentProfile, onClose}) {
+export default function StoryModal({ data, onClose }: { data: Record<string, any>, onClose: () => void }) {
+  
+	const [currentStoryIndex, setCurrentStoryIndex] = useState<number>(0);
 
-    const [activeStory, setActiveStory] = useState<null | string>(null);
-    function setStory() {
-       let temp = data.filter(obj => obj.user_id === currentProfile);
-    //    console.log(temp);
-    console.log(temp.length && temp[0].stories && temp[0].stories[0].media_url);
-       setActiveStory(temp.length && temp[0].stories && temp[0].stories[0].media_url);
-       
-    }
-    useEffect(() => {
-        setStory()
-    }, [])
-    return (
-        <div className="story-popup">
-            {activeStory && <Image src={activeStory} alt="story" fill />}
-            <button onClick={onClose}>close</button>
-        </div>
-    );
+	const nextStory = () => {
+		if (currentStoryIndex >= data.stories.length - 1) {
+			onClose();
+			return;
+		}
+		setCurrentStoryIndex(currentStoryIndex+1);
+	};
+
+	const prevStory = () => {
+		if (currentStoryIndex <= 0) {
+			onClose();
+			return;
+		}
+		setCurrentStoryIndex(currentStoryIndex-1);
+	};
+
+	return (
+		<div className="story-popup">
+			{data.stories && <Image src={data.stories[currentStoryIndex].media_url} alt="story" fill />}
+			<button onClick={onClose}>close</button>
+			<button onClick={prevStory}>prev</button>
+			<button onClick={nextStory}>next</button>
+		</div>
+	);
 }

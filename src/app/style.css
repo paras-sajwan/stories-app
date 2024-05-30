@@ -22,27 +22,45 @@ body {
     display: none;
   }
 
+.profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.username {
+    text-align: center;
+    font-size: 12px;
+    width: 70px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
 .profile-div {
     position: relative;
     border: 3px solid red;
     border-radius: 50%;
     overflow: hidden;
-    max-height: 90px;
-    max-width: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 75px;
-    min-height: 75px;
-    margin-right: 8px;
+    width: 75px;
+    height: 75px;
 }
 
 .profile-pictures {
-    min-height: 70px;
-    min-width: 70px;
+    max-height: 70px;
+    max-width: 70px;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
+}
+
+.username {
+    text-align: center;
+    font-size: 12px;
 }
 
 .story-popup {
