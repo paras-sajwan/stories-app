@@ -1,0 +1,60 @@
+body {
+    margin: 0px;
+}
+
+.logo-div {
+    width: 150px;
+    padding-left: 12px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.stories-section {
+    overflow-x: scroll;
+    padding-left: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(227 227 227);
+    display: flex;
+    align-items: center;
+}
+
+.stories-section::-webkit-scrollbar {
+    display: none;
+  }
+
+.profile-div {
+    position: relative;
+    border: 3px solid red;
+    border-radius: 50%;
+    overflow: hidden;
+    max-height: 90px;
+    max-width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 75px;
+    min-height: 75px;
+    margin-right: 8px;
+}
+
+.profile-pictures {
+    min-height: 70px;
+    min-width: 70px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.story-popup {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: black;
+}
+
+.story-popup button {
+    z-index: 9;
+    position: relative;
+}
