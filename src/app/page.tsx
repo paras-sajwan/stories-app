@@ -21,7 +21,7 @@ export default function Home(){
 		setIsStoryPopupActive(true);
 	}
 
-	const handleCurrentProfileIndex = (data: number) => {
+	const showStory = (data: number) => {
 		setCurrentProfileIndex(data);
 		openStoryPopup();
 	}
@@ -60,7 +60,7 @@ export default function Home(){
 				{data.map((el, i) => (
 					<div className='profile-wrapper' key={i}>
 						<div className='profile-div'>
-							<div className='profile-pictures' onClick={() => handleCurrentProfileIndex(i)}>
+							<div className='profile-pictures' onClick={() => showStory(i)}>
 								<Image src={el.profile_picture} alt="profile picture" width={70} height={70} />
 							</div>
 						</div>
@@ -70,9 +70,9 @@ export default function Home(){
 				{isStoryPopupActive && (
 					<>
 						<StoryModal data={data} currentProfileIndex={currentProfileIndex} currentStoryIndex={currentStoryIndex} closeStoryPopup={closeStoryPopup}/>
-						<div className='temp-div'>
-							<button onClick={prevStory}>prev</button>
-							<button onClick={nextStory}>next</button>
+						<div className='story-toggle-div'>
+							<div className='toggle-prev-story' onClick={prevStory}></div>
+							<div className='toggle-next-story' onClick={nextStory}></div>
 						</div>
 					</>
 				)}

@@ -19,7 +19,7 @@ export default function StoryModal({ data, currentProfileIndex, currentStoryInde
 					<Image src="./cross-icon.svg" alt="cros icon" sizes="auto" fill style={{objectFit:"contain"}} />
 				</div>
 			</div>
-			<div className='another-temp'>
+			<div className='popup-story-deatils'>
 				Profile {currentProfileIndex}
 				Story {currentStoryIndex}
 			</div>
