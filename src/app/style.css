@@ -76,3 +76,31 @@ body {
     z-index: 9;
     position: relative;
 }
+
+.temp-div {
+    position: absolute;
+    top: 50%;
+}
+
+.story-popup-user {
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    top: 20px;
+    left: 20px;
+}
+
+.story-popup-user-name {
+    color: rgb(255 255 255);
+}
+
+.story-popup-user-pic {
+    height: 50px;
+    width: 50px;
+    display: block;
+    position: relative;
+    margin-right: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+}
