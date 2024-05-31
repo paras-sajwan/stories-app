@@ -1,17 +1,22 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import logo from '/public/logo.png';
 import post from '/public/instagram-post.png';
 import './style.css';
-import {data} from './data/data';
+// import {data} from './data/data';
 import StoryModal from './story';
 
 export default function Home(){
 	const [isStoryPopupActive, setIsStoryPopupActive] = useState<boolean>(false);
 	const [currentProfileIndex, setCurrentProfileIndex] = useState<number>(0);
 	const [currentStoryIndex, setCurrentStoryIndex] = useState<number>(0);
+	const [data, setData] = useState<any[]>([]);
+
+	useEffect(() => {
+		callDataAPI()
+	}, []);
 
 	const closeStoryPopup = () => {
 		setIsStoryPopupActive(false);
@@ -21,8 +26,8 @@ export default function Home(){
 		setIsStoryPopupActive(true);
 	}
 
-	const showStory = (data: number) => {
-		setCurrentProfileIndex(data);
+	const showStory = (profileIndex: number) => {
+		setCurrentProfileIndex(profileIndex);
 		openStoryPopup();
 	}
 
@@ -50,6 +55,14 @@ export default function Home(){
 			closeStoryPopup();
 		}
 	};
+
+	const callDataAPI = () => {
+		fetch("/data")
+			.then((res) => res.json())
+			.then((data) => {
+				setData(data);
+			})
+	}
 
 	return (
 		<div className='main-div'>
