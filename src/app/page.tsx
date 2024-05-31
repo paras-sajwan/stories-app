@@ -34,16 +34,25 @@ export default function Home(){
 		if (currentStoryIndex < data[currentProfileIndex].stories.length - 1) {
 			setCurrentStoryIndex(currentStoryIndex+1)
 			return;
+		} else if (currentProfileIndex < data.length - 1) {
+			setCurrentStoryIndex(0);
+			setCurrentProfileIndex(currentProfileIndex + 1);
+			return
+		} else {
+			closeStoryPopup();
 		}
-		closeStoryPopup();
 	};
 
 	const prevStory = () => {
 		if (currentStoryIndex > 0) {
-			setCurrentStoryIndex(currentStoryIndex-1);
+			setCurrentStoryIndex(currentStoryIndex - 1);
 			return;
+		} else if (currentProfileIndex > 0) {
+			setCurrentStoryIndex(data[currentProfileIndex - 1].stories.length - 1);
+			setCurrentProfileIndex(currentProfileIndex - 1);
+		} else {
+			closeStoryPopup();
 		}
-		closeStoryPopup();
 	};
 
 	return (
