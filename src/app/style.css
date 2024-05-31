@@ -153,6 +153,25 @@ body {
     flex: 1 1 0px;
 }
 
+.stories-bar {
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    z-index: 9;
+    box-sizing: border-box;
+    padding: 0px 20px;
+}
+
+.stories-bar div {
+    height: 2px;
+    background: white;
+    flex: 1 1 0px;
+    border-radius: 150px;
+    margin-right: 8px;
+}
+
 @media only screen and (min-width: 768px) {
     .main-div {
         width: 40%;

@@ -13,8 +13,15 @@ export const data = [
             },
             {
                 "story_id": "story_01_02",
-                "media_type": "video",
+                "media_type": "image",
                 "media_url": "https://picsum.photos/id/61/600/800",
+                "posted_at": "2024-05-28T16:00:00Z",
+                "viewed": false
+            },
+            {
+                "story_id": "story_01_03",
+                "media_type": "image",
+                "media_url": "https://picsum.photos/id/18/600/800",
                 "posted_at": "2024-05-28T16:00:00Z",
                 "viewed": false
             }
@@ -34,7 +41,7 @@ export const data = [
             },
             {
                 "story_id": "story_02_02",
-                "media_type": "video",
+                "media_type": "image",
                 "media_url": "https://picsum.photos/id/63/600/800",
                 "posted_at": "2024-05-28T14:45:00Z",
                 "viewed": true
