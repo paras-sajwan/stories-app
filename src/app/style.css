@@ -77,11 +77,6 @@ body {
     position: relative;
 }
 
-.temp-div {
-    position: absolute;
-    top: 50%;
-}
-
 .popup-story-deatils {
     position: absolute;
     z-index: 99;
@@ -158,3 +153,9 @@ body {
     flex: 1 1 0px;
 }
 
+@media only screen and (min-width: 768px) {
+    .main-div {
+        width: 40%;
+        margin: 0px auto;
+    }
+}

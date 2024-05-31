@@ -20,8 +20,7 @@ export default function StoryModal({ data, currentProfileIndex, currentStoryInde
 				</div>
 			</div>
 			<div className='popup-story-deatils'>
-				Profile {currentProfileIndex}
-				Story {currentStoryIndex}
+				Profile {currentProfileIndex}, Story {currentStoryIndex}
 			</div>
 			{data[currentProfileIndex].stories && data[currentProfileIndex].stories[currentStoryIndex].media_url && <Image src={data[currentProfileIndex].stories[currentStoryIndex].media_url} alt="story" sizes="auto" fill style={{objectFit:"cover"}} />}
 		</div>

@@ -43,7 +43,7 @@ export const data = [
     },
     {
         "user_id": "user_03",
-        "username": "alice_wonderland",
+        "username": "rhinocerosflyostrich",
         "profile_picture": "https://picsum.photos/id/646/200",
         "stories": [
             {
@@ -57,7 +57,7 @@ export const data = [
     },
     {
         "user_id": "user_04",
-        "username": "alice_wonderland",
+        "username": "porcupineantkangaroo",
         "profile_picture": "https://picsum.photos/id/669/200",
         "stories": [
             {
@@ -71,7 +71,7 @@ export const data = [
     },
     {
         "user_id": "user_05",
-        "username": "alice_wonderland",
+        "username": "foxelephantalligator",
         "profile_picture": "https://picsum.photos/id/822/200",
         "stories": [
             {
@@ -85,7 +85,7 @@ export const data = [
     },
     {
         "user_id": "user_06",
-        "username": "alice_wonderland",
+        "username": "eaglespidersnailfish",
         "profile_picture": "https://picsum.photos/id/823/200",
         "stories": [
             {
@@ -99,7 +99,7 @@ export const data = [
     },
     {
         "user_id": "user_07",
-        "username": "alice_wonderland",
+        "username": "wolverinemonkeywhale",
         "profile_picture": "https://picsum.photos/id/996/200",
         "stories": [
             {
@@ -113,7 +113,7 @@ export const data = [
     },
     {
         "user_id": "user_08",
-        "username": "alice_wonderland",
+        "username": "funnydealer",
         "profile_picture": "https://picsum.photos/id/1027/200",
         "stories": [
             {
