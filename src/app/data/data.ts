@@ -49,7 +49,7 @@ export const data = [
             {
                 "story_id": "story_03_01",
                 "media_type": "image",
-                "media_url": "https://picsum.photos/id/65/600/800",
+                "media_url": "https://picsum.photos/id/17/600/800",
                 "posted_at": "2024-05-28T09:05:00Z",
                 "viewed": false
             }
