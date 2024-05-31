@@ -8,10 +8,6 @@ import './style.css';
 import {data} from './data/data';
 import StoryModal from './story';
 
-type json = {
-    [key: string]: any;
-};
-
 export default function Home(){
 	const [isStoryPopupActive, setIsStoryPopupActive] = useState<boolean>(false);
 	const [currentProfileIndex, setCurrentProfileIndex] = useState<number>(0);
@@ -73,9 +69,8 @@ export default function Home(){
 				))}
 				{isStoryPopupActive && (
 					<>
-						<StoryModal data={data} currentProfileIndex={currentProfileIndex} currentStoryIndex={currentStoryIndex} />
+						<StoryModal data={data} currentProfileIndex={currentProfileIndex} currentStoryIndex={currentStoryIndex} closeStoryPopup={closeStoryPopup}/>
 						<div className='temp-div'>
-							<button onClick={closeStoryPopup}>close</button>
 							<button onClick={prevStory}>prev</button>
 							<button onClick={nextStory}>next</button>
 						</div>
